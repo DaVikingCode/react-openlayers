@@ -1,0 +1,80 @@
+{
+	"name": "react-openlayers",
+	"author": "ange.picard",
+	"module": "dist/react-openlayers.esm.js",
+	"description": "Library wrapping open layers with react.",
+	"version": "0.1.0",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist",
+		"src"
+	],
+	"engines": {
+		"node": ">=10"
+	},
+	"scripts": {
+		"start": "tsdx watch",
+		"build": "tsdx build",
+		"test": "tsdx test --passWithNoTests",
+		"lint": "eslint \"{src,test,stories}/**/*.{js,ts,tsx}\"",
+		"prepare": "husky install",
+		"size": "size-limit",
+		"analyze": "size-limit --why",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
+	},
+	"peerDependencies": {
+		"ol": ">=6.5.0",
+		"react": ">=16"
+	},
+	"devDependencies": {
+		"@size-limit/preset-small-lib": "^4.9.2",
+		"@storybook/addon-essentials": "^6.2.1",
+		"@storybook/addon-info": "^5.3.21",
+		"@storybook/addon-links": "^6.2.1",
+		"@storybook/addons": "^6.2.1",
+		"@storybook/react": "^6.2.1",
+		"@types/jest": "^26.0.22",
+		"@types/lodash": "^4.14.168",
+		"@types/ol": "^6.4.2",
+		"@types/react": "^17.0.3",
+		"@types/react-dom": "^17.0.3",
+		"@typescript-eslint/eslint-plugin": "^4.20.0",
+		"@typescript-eslint/parser": "^4.20.0",
+		"husky": "^6.0.0",
+		"jest": "^27.0.0-next.6",
+		"postcss": "^8.2.9",
+		"react-is": "^17.0.2",
+		"rollup-plugin-postcss": "^4.0.0",
+		"rollup-plugin-postcss-modules": "^2.0.2",
+		"size-limit": "^4.10.2",
+		"ts-jest": "^27.0.0-next.10",
+		"ts-node": "^9.1.1",
+		"tsdx": "^0.14.1",
+		"tslib": "^2.1.0",
+		"typescript": "^4.2.3"
+	},
+	"dependencies": {
+		"ol": ">=6.5.0",
+		"react": ">=16",
+		"react-dom": "^17.0.2",
+		"screenfull": "^5.1.0"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "tsdx lint && tsdx build"
+		}
+	},
+	"size-limit": [
+		{
+			"path": "dist/react-openlayers.cjs.production.min.js",
+			"limit": "10 KB"
+		},
+		{
+			"path": "dist/react-openlayers.esm.js",
+			"limit": "10 KB"
+		}
+	]
+}
