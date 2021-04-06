@@ -61,7 +61,8 @@ function useEvent(eventName, callback, observable) {
 
 var Map = function Map(_ref) {
   var children = _ref.children,
-      onMouseMove = _ref.onMouseMove;
+      onMouseMove = _ref.onMouseMove,
+      mapRef = _ref.mapRef;
   var mapEl = React.useRef(null);
 
   var _useState = React.useState(undefined),
@@ -79,6 +80,11 @@ var Map = function Map(_ref) {
     var mapObject = new ol.Map(options);
     mapObject.setTarget(mapEl.current);
     setMap(mapObject);
+
+    if (mapRef) {
+      mapRef.current = mapObject;
+    }
+
     return function () {
       return mapObject.setTarget(undefined);
     };

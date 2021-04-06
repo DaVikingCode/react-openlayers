@@ -54,7 +54,8 @@ function useEvent(eventName, callback, observable) {
 
 var Map = function Map(_ref) {
   var children = _ref.children,
-      onMouseMove = _ref.onMouseMove;
+      onMouseMove = _ref.onMouseMove,
+      mapRef = _ref.mapRef;
   var mapEl = useRef(null);
 
   var _useState = useState(undefined),
@@ -72,6 +73,11 @@ var Map = function Map(_ref) {
     var mapObject = new Map$1(options);
     mapObject.setTarget(mapEl.current);
     setMap(mapObject);
+
+    if (mapRef) {
+      mapRef.current = mapObject;
+    }
+
     return function () {
       return mapObject.setTarget(undefined);
     };

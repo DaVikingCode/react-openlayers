@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, FunctionComponent } from "react";
+import React, { useRef, useState, useEffect, FunctionComponent, MutableRefObject } from "react";
 import "./map.css";
 import { MapContext } from "./map-context";
 import * as ol from "ol";
@@ -7,10 +7,11 @@ import { useEvent } from "../events/use-event";
 type MapRef = ol.Map | undefined;
 
 export interface MapProps {
+	mapRef?: MutableRefObject<ol.Map>;
 	onMouseMove?: (event: any) => void;
 }
 
-export const Map: FunctionComponent<MapProps> = ({ children, onMouseMove }) => {
+export const Map: FunctionComponent<MapProps> = ({ children, onMouseMove, mapRef }) => {
 	const mapEl = useRef<HTMLDivElement>(null);
 
 	const [map, setMap] = useState<MapRef>(undefined);
@@ -26,6 +27,9 @@ export const Map: FunctionComponent<MapProps> = ({ children, onMouseMove }) => {
 		const mapObject = new ol.Map(options);
 		mapObject.setTarget(mapEl.current);
 		setMap(mapObject);
+		if (mapRef) {
+			mapRef.current = mapObject;
+		}
 		return () => mapObject.setTarget(undefined);
 	}, []);
 
