@@ -10,6 +10,60 @@ import OLVectorLayer from 'ol/layer/Vector';
 import OLImageLayer from 'ol/layer/Image';
 import { Draw as Draw$1, Snap as Snap$1, Modify as Modify$1 } from 'ol/interaction';
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
   var insertAt = ref.insertAt;
@@ -119,10 +173,11 @@ var View = function View(_ref) {
   return null;
 };
 
-var css_248z$1 = ".controls_controls__3HQ8m {\n\tdisplay: grid;\n\tgrid-template-columns: 1fr;\n\tgap: 8px;\n\tpadding: 8px;\n\tpointer-events: none;\n}\n\n.controls_controls__3HQ8m>* {\n\tmax-width: max-content;\n\tpointer-events: auto;\n}\n";
+var css_248z$1 = ".controls_controls__3HQ8m {\n\tdisplay: grid;\n\theight: 100%;\n\tgrid-template-columns: 1fr 1fr;\n\tgrid-template-rows: 1fr 1fr;\n\tgrid-template-areas: \"top-left top-right\"\"bottom-left bottom-right\";\n\talign-content: space-between;\n\tjustify-content: space-between;\n\n\tgap: 8px;\n\tpadding: 8px;\n\n\tpointer-events: none;\n}\n\n.controls_controls__3HQ8m>* {\n\tmax-width: max-content;\n\tpointer-events: auto;\n}\n";
 var style = {"controls":"controls_controls__3HQ8m"};
 styleInject(css_248z$1);
 
+var _styles;
 var Controls = function Controls(_ref) {
   var children = _ref.children;
   var map = useContext(MapContext);
@@ -139,42 +194,50 @@ var Controls = function Controls(_ref) {
     className: style.controls
   }, children), overlay) : null;
 };
+var ControlPosition;
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-  try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
-  }
+(function (ControlPosition) {
+  ControlPosition["TopLeft"] = "top-left";
+  ControlPosition["TopRight"] = "top-right";
+  ControlPosition["BottomLeft"] = "bottom-left";
+  ControlPosition["BottomRight"] = "bottom-right";
+})(ControlPosition || (ControlPosition = {}));
 
-  if (info.done) {
-    resolve(value);
-  } else {
-    Promise.resolve(value).then(_next, _throw);
-  }
-}
-
-function _asyncToGenerator(fn) {
-  return function () {
-    var self = this,
-        args = arguments;
-    return new Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-      }
-
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-      }
-
-      _next(undefined);
-    });
-  };
-}
+var commonStyles = {
+  display: "flex",
+  pointerEvents: "none",
+  gap: "8px"
+};
+var styles = (_styles = {}, _styles[ControlPosition.BottomRight] = /*#__PURE__*/_extends({}, commonStyles, {
+  gridArea: "bottom-right",
+  marginLeft: "auto",
+  flexDirection: "column",
+  alignItems: "end",
+  justifyContent: "end"
+}), _styles[ControlPosition.BottomLeft] = /*#__PURE__*/_extends({}, commonStyles, {
+  gridArea: "bottom-left",
+  marginRight: "auto",
+  flexDirection: "column",
+  alignItems: "end",
+  justifyContent: "end"
+}), _styles[ControlPosition.TopLeft] = /*#__PURE__*/_extends({}, commonStyles, {
+  gridArea: "top-left",
+  marginRight: "auto",
+  flexDirection: "column",
+  alignItems: "end"
+}), _styles[ControlPosition.TopRight] = /*#__PURE__*/_extends({}, commonStyles, {
+  gridArea: "top-right",
+  marginLeft: "auto",
+  flexDirection: "column",
+  alignItems: "end"
+}), _styles);
+var Section = function Section(_ref2) {
+  var children = _ref2.children,
+      pos = _ref2.pos;
+  return React.createElement("div", {
+    style: styles[pos]
+  }, children);
+};
 
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
@@ -1285,5 +1348,5 @@ var Modify = function Modify(_ref) {
   return null;
 };
 
-export { Controls, Draw, FullScreenControl, ImageLayer, Interactions, LayerSelectionControl, Layers, Map, MapContext, Modify, Snap, tileLayer as TileLayer, VectorLayer, View, useEvent };
+export { ControlPosition, Controls, Draw, FullScreenControl, ImageLayer, Interactions, LayerSelectionControl, Layers, Map, MapContext, Modify, Section, Snap, tileLayer as TileLayer, VectorLayer, View, useEvent };
 //# sourceMappingURL=react-openlayers.esm.js.map

@@ -1,8 +1,15 @@
 .controls {
 	display: grid;
-	grid-template-columns: 1fr;
+	height: 100%;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "top-left top-right""bottom-left bottom-right";
+	align-content: space-between;
+	justify-content: space-between;
+
 	gap: 8px;
 	padding: 8px;
+
 	pointer-events: none;
 }
 
