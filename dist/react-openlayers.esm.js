@@ -173,7 +173,7 @@ var View = function View(_ref) {
   return null;
 };
 
-var css_248z$1 = ".controls_controls__3HQ8m {\n\tdisplay: grid;\n\theight: 100%;\n\tgrid-template-columns: 1fr 1fr;\n\tgrid-template-rows: 1fr 1fr;\n\tgrid-template-areas: \"top-left top-right\"\"bottom-left bottom-right\";\n\talign-content: space-between;\n\tjustify-content: space-between;\n\n\tgap: 8px;\n\tpadding: 8px;\n\n\tpointer-events: none;\n}\n\n.controls_controls__3HQ8m>* {\n\tmax-width: max-content;\n\tpointer-events: auto;\n}\n";
+var css_248z$1 = ".controls_controls__3HQ8m {\n\tdisplay: grid;\n\theight: 100%;\n\tgrid-template-columns: 1fr 1fr;\n\tgrid-template-rows: 1fr 1fr;\n\tgrid-template-areas: \"top-left top-right\"\"bottom-left bottom-right\";\n\talign-content: space-between;\n\tjustify-content: space-between;\n\n\tgap: 8px;\n\tpadding: 8px;\n\n\tpointer-events: none;\n}\n\n.controls_controls__3HQ8m>*>* {\n\tmax-width: max-content;\n\tpointer-events: auto;\n}\n";
 var style = {"controls":"controls_controls__3HQ8m"};
 styleInject(css_248z$1);
 

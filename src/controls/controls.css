@@ -13,7 +13,7 @@
 	pointer-events: none;
 }
 
-.controls>* {
+.controls>*>* {
 	max-width: max-content;
 	pointer-events: auto;
 }
