@@ -48,7 +48,7 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		gridArea: "bottom-left",
 		marginRight: "auto",
 		flexDirection: "column",
-		alignItems: "end",
+		alignItems: "start",
 		justifyContent: "end"
 	},
 	[ControlPosition.TopLeft]: {
@@ -56,7 +56,7 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		gridArea: "top-left",
 		marginRight: "auto",
 		flexDirection: "column",
-		alignItems: "end",
+		alignItems: "start",
 	},
 	[ControlPosition.TopRight]: {
 		...commonStyles,
