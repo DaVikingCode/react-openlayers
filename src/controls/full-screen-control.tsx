@@ -34,7 +34,6 @@ function useDefaultControl(map: Map | undefined, hasCustomControl: boolean) {
 			.getTargetElement()
 			.querySelector("." + customClassName) as HTMLButtonElement;
 		setDefaultControl(element);
-		console.log(element);
 
 		return () => {
 			// FIXME: Controls are not supposed to be edited after the map has been created.

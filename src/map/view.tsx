@@ -9,9 +9,13 @@ type Props = {
 	options: ViewOptions,
 	onChangeCenter?: (evt: ObjectEvent) => void;
 	onChangeResolution?: (evt: ObjectEvent) => void;
+	onChangeRotation?: (evt: ObjectEvent) => void;
+	onChange?: (evt: ObjectEvent) => void;
+	onChangeProperty?: (evt: ObjectEvent) => void;
+	onError?: (evt: ObjectEvent) => void;
 }
 
-export const View: FC<Props> = ({ options, onChangeCenter, onChangeResolution }) => {
+export const View: FC<Props> = ({ options, onChangeCenter, onChangeResolution, onChangeRotation, onChangeProperty, onError, onChange }) => {
 	const map = useContext(MapContext);
 	const [view, setView] = useState<OlView>();
 
@@ -30,6 +34,10 @@ export const View: FC<Props> = ({ options, onChangeCenter, onChangeResolution })
 
 	useEvent("change:center", onChangeCenter, view);
 	useEvent("change:resolution", onChangeResolution, view);
+	useEvent("change:rotation", onChangeRotation, view);
+	useEvent("propertychange", onChangeProperty, view);
+	useEvent("error", onError, view);
+	useEvent("change", onChange, view);
 
 	return null;
 };

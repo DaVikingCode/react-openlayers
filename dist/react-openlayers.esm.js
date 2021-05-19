@@ -148,7 +148,11 @@ var Map = function Map(_ref) {
 var View = function View(_ref) {
   var options = _ref.options,
       onChangeCenter = _ref.onChangeCenter,
-      onChangeResolution = _ref.onChangeResolution;
+      onChangeResolution = _ref.onChangeResolution,
+      onChangeRotation = _ref.onChangeRotation,
+      onChangeProperty = _ref.onChangeProperty,
+      onError = _ref.onError,
+      onChange = _ref.onChange;
   var map = useContext(MapContext);
 
   var _useState = useState(),
@@ -170,6 +174,10 @@ var View = function View(_ref) {
   }, [map, options]);
   useEvent("change:center", onChangeCenter, view);
   useEvent("change:resolution", onChangeResolution, view);
+  useEvent("change:rotation", onChangeRotation, view);
+  useEvent("propertychange", onChangeProperty, view);
+  useEvent("error", onError, view);
+  useEvent("change", onChange, view);
   return null;
 };
 
@@ -218,13 +226,13 @@ var styles = (_styles = {}, _styles[ControlPosition.BottomRight] = /*#__PURE__*/
   gridArea: "bottom-left",
   marginRight: "auto",
   flexDirection: "column",
-  alignItems: "end",
+  alignItems: "start",
   justifyContent: "end"
 }), _styles[ControlPosition.TopLeft] = /*#__PURE__*/_extends({}, commonStyles, {
   gridArea: "top-left",
   marginRight: "auto",
   flexDirection: "column",
-  alignItems: "end"
+  alignItems: "start"
 }), _styles[ControlPosition.TopRight] = /*#__PURE__*/_extends({}, commonStyles, {
   gridArea: "top-right",
   marginLeft: "auto",
@@ -1013,7 +1021,6 @@ function useDefaultControl(map, hasCustomControl) {
     map.controls.push(fullScreenControl);
     var element = map.getTargetElement().querySelector("." + customClassName);
     setDefaultControl(element);
-    console.log(element);
     return function () {
       // FIXME: Controls are not supposed to be edited after the map has been created.
       // @ts-ignore
@@ -1173,7 +1180,6 @@ var TileLayer = function TileLayer(_ref) {
     });
     map.addLayer(tileLayer);
     setLayer(tileLayer);
-    console.log("layer", tileLayer);
     return function () {
       if (map) {
         map.removeLayer(tileLayer);
@@ -1214,7 +1220,6 @@ var VectorLayer = function VectorLayer(_ref) {
     vectorLayer.setZIndex(zIndex);
     return function () {
       if (map) {
-        console.log("new layer");
         map.removeLayer(vectorLayer);
       }
     };

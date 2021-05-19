@@ -21,7 +21,6 @@ export const VectorLayer: FunctionComponent<VectorLayerProps> = ({ source, style
 
 		return () => {
 			if (map) {
-				console.log("new layer");
 				map.removeLayer(vectorLayer);
 			}
 		};

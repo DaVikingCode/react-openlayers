@@ -20,7 +20,6 @@ const TileLayer: FC<TileLayerProps> = ({ options, name, onLayerAdded }) => {
 		tileLayer.setProperties({ name });
 		map.addLayer(tileLayer);
 		setLayer(tileLayer);
-		console.log("layer", tileLayer);
 		return () => {
 			if (map) {
 				map.removeLayer(tileLayer);
