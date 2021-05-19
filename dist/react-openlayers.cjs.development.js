@@ -1168,6 +1168,11 @@ function LayerSelectionControl(_ref) {
   }));
 }
 
+var Layers = function Layers(_ref) {
+  var children = _ref.children;
+  return React__default.createElement("div", null, children, " ");
+};
+
 var TileLayer = function TileLayer(_ref) {
   var options = _ref.options,
       name = _ref.name,
@@ -1200,11 +1205,6 @@ var TileLayer = function TileLayer(_ref) {
 };
 
 var tileLayer = /*#__PURE__*/React__default.memo(TileLayer);
-
-var Layers = function Layers(_ref) {
-  var children = _ref.children;
-  return React__default.createElement("div", null, children, " ");
-};
 
 var VectorLayer = function VectorLayer(_ref) {
   var source = _ref.source,

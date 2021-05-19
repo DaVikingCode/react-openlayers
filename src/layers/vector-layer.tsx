@@ -4,8 +4,8 @@ import OLVectorLayer from "ol/layer/Vector";
 import { Options } from "ol/layer/BaseVector";
 import { BaseLayerProps } from "./base-layer-props";
 
-type VectorLayerProps = Options & BaseLayerProps;
-export const VectorLayer: FunctionComponent<VectorLayerProps> = ({ source, style, zIndex = 0, name }) => {
+type Props = Options & BaseLayerProps;
+const VectorLayer: FunctionComponent<Props> = ({ source, style, zIndex = 0, name }) => {
 	const map = useContext(MapContext);
 
 	useEffect(() => {
@@ -28,3 +28,6 @@ export const VectorLayer: FunctionComponent<VectorLayerProps> = ({ source, style
 
 	return null;
 };
+
+export default VectorLayer;
+export { Props as VectorLayerProps };

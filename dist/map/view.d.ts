@@ -12,3 +12,4 @@ declare type Props = {
 };
 export declare const View: FC<Props>;
 export default View;
+export { Props as ViewProps };

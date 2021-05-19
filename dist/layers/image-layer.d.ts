@@ -8,3 +8,4 @@ declare type ImageLayerProps = BaseLayerProps & {
 };
 declare const ImageLayer: FC<ImageLayerProps>;
 export default ImageLayer;
+export { ImageLayerProps };

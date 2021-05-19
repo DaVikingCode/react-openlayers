@@ -37,3 +37,4 @@ const ImageLayer: FC<ImageLayerProps> = ({ options, name, onLayerAdded}) => {
 };
 
 export default ImageLayer;
+export { ImageLayerProps };

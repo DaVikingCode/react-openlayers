@@ -4,12 +4,11 @@ import OLTileLayer from "ol/layer/Tile";
 import { Options } from "ol/layer/BaseTile";
 import { BaseLayerProps } from "./base-layer-props";
 
-type TileLayerProps = BaseLayerProps & {
+type Props = BaseLayerProps & {
 	options: Options;
 	onLayerAdded?: (layer: OLTileLayer) => void
 };
-
-const TileLayer: FC<TileLayerProps> = ({ options, name, onLayerAdded }) => {
+const TileLayer: FC<Props> = ({ options, name, onLayerAdded }) => {
 	const map = useContext(MapContext);
 	const [layer, setLayer] = useState<OLTileLayer | null>(null);
 
@@ -36,3 +35,4 @@ const TileLayer: FC<TileLayerProps> = ({ options, name, onLayerAdded }) => {
 };
 
 export default React.memo(TileLayer);
+export { Props as TileLayerProps };
