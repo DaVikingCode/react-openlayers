@@ -11,6 +11,6 @@ export {
 	VectorLayer
 };
 
-export * from './image-layer';
-export * from './vector-layer';
-export * from './tile-layer';
+export * from "./image-layer";
+export * from "./vector-layer";
+export * from "./tile-layer";

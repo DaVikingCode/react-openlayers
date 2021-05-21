@@ -11,7 +11,6 @@ var ol = require('ol');
 var Observable = require('ol/Observable');
 var control = require('ol/control');
 var screenfull = _interopDefault(require('screenfull'));
-var lodash = require('lodash');
 var OLTileLayer = _interopDefault(require('ol/layer/Tile'));
 var OLVectorLayer = _interopDefault(require('ol/layer/Vector'));
 var OLImageLayer = _interopDefault(require('ol/layer/Image'));
@@ -1116,58 +1115,6 @@ var FullScreenControl = function FullScreenControl(_ref) {
   });
 };
 
-function DefaultLayerSelection(props) {
-  return React__default.createElement("div", null, React__default.createElement("span", null, props.layerName), React__default.createElement("button", {
-    onClick: function onClick() {
-      return props.show ? props.onHide() : props.onShow();
-    }
-  }, "Hide/Show"));
-}
-
-function LayerSelectionControl(_ref) {
-  var Container = _ref.Container,
-      _ref$LayerSelection = _ref.LayerSelection,
-      LayerSelection = _ref$LayerSelection === void 0 ? DefaultLayerSelection : _ref$LayerSelection;
-  var map = React.useContext(MapContext);
-
-  var _useState = React.useState(null),
-      layers = _useState[0],
-      setLayers = _useState[1];
-
-  React.useEffect(function () {
-    if (!map) return;
-    var layerGroup = map.getLayerGroup();
-    var evtKey = layerGroup.on("change", lodash.debounce(function (evt) {
-      var _evt$target, _evt$target$values_;
-
-      var _layers = evt == null ? void 0 : (_evt$target = evt.target) == null ? void 0 : (_evt$target$values_ = _evt$target.values_) == null ? void 0 : _evt$target$values_.layers;
-
-      setLayers([].concat(_layers.getArray()));
-    }, 50));
-    return function () {
-      Observable.unByKey(evtKey);
-    };
-  });
-  React.useEffect(function () {
-    if (!map) return;
-    var layers = map.getLayers();
-    setLayers(layers.getArray());
-  }, [map]);
-  return React__default.createElement(Container, null, layers == null ? void 0 : layers.map(function (layer) {
-    return React__default.createElement(LayerSelection, {
-      key: layer.ol_uid,
-      layerName: layer.getProperties().name,
-      onHide: function onHide() {
-        return layer.setVisible(false);
-      },
-      onShow: function onShow() {
-        return layer.setVisible(true);
-      },
-      show: layer.getVisible()
-    });
-  }));
-}
-
 var Layers = function Layers(_ref) {
   var children = _ref.children;
   return React__default.createElement("div", null, children, " ");
@@ -1364,7 +1311,6 @@ exports.Draw = Draw;
 exports.FullScreenControl = FullScreenControl;
 exports.ImageLayer = ImageLayer;
 exports.Interactions = Interactions;
-exports.LayerSelectionControl = LayerSelectionControl;
 exports.Layers = Layers;
 exports.Map = Map;
 exports.MapContext = MapContext;
