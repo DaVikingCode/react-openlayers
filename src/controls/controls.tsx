@@ -40,30 +40,30 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		gridArea: "bottom-right",
 		marginLeft: "auto",
 		flexDirection: "column",
-		alignItems: "end",
-		justifyContent: "end"
+		alignItems: "flex-end",
+		justifyContent: "flex-end"
 	},
 	[ControlPosition.BottomLeft]: {
 		...commonStyles,
 		gridArea: "bottom-left",
 		marginRight: "auto",
 		flexDirection: "column",
-		alignItems: "start",
-		justifyContent: "end"
+		alignItems: "flex-start",
+		justifyContent: "flex-end"
 	},
 	[ControlPosition.TopLeft]: {
 		...commonStyles,
 		gridArea: "top-left",
 		marginRight: "auto",
 		flexDirection: "column",
-		alignItems: "start",
+		alignItems: "flex-start",
 	},
 	[ControlPosition.TopRight]: {
 		...commonStyles,
 		gridArea: "top-right",
 		marginLeft: "auto",
 		flexDirection: "column",
-		alignItems: "end",
+		alignItems: "flex-end",
 	}
 };
 

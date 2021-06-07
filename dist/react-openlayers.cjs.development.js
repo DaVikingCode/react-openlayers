@@ -225,24 +225,24 @@ var styles = (_styles = {}, _styles[exports.ControlPosition.BottomRight] = /*#__
   gridArea: "bottom-right",
   marginLeft: "auto",
   flexDirection: "column",
-  alignItems: "end",
-  justifyContent: "end"
+  alignItems: "flex-end",
+  justifyContent: "flex-end"
 }), _styles[exports.ControlPosition.BottomLeft] = /*#__PURE__*/_extends({}, commonStyles, {
   gridArea: "bottom-left",
   marginRight: "auto",
   flexDirection: "column",
-  alignItems: "start",
-  justifyContent: "end"
+  alignItems: "flex-start",
+  justifyContent: "flex-end"
 }), _styles[exports.ControlPosition.TopLeft] = /*#__PURE__*/_extends({}, commonStyles, {
   gridArea: "top-left",
   marginRight: "auto",
   flexDirection: "column",
-  alignItems: "start"
+  alignItems: "flex-start"
 }), _styles[exports.ControlPosition.TopRight] = /*#__PURE__*/_extends({}, commonStyles, {
   gridArea: "top-right",
   marginLeft: "auto",
   flexDirection: "column",
-  alignItems: "end"
+  alignItems: "flex-end"
 }), _styles);
 var Section = function Section(_ref2) {
   var children = _ref2.children,
