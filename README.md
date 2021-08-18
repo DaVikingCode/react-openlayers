@@ -1,6 +1,6 @@
 # React - OpenLayers
 
-> Do not try this at home, this is in 
+> Do not try this at home, this is made for custom needs and not battle tested.
 
 This library brings a lightweight abstraction over open layers to allow for simpler usage in a react application.
 
