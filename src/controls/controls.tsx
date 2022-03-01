@@ -8,17 +8,18 @@ export const Controls: FC = ({ children }) => {
 	const [overlay, setOverlay] = useState<Element | null>();
 
 	if (map && !overlay) {
-		setOverlay(map
-			.getTargetElement()
-			.querySelector(".ol-overlaycontainer-stopevent")
+		setOverlay(
+			map
+				.getTargetElement()
+				.querySelector(".ol-overlaycontainer-stopevent")
 		);
 	}
 
 	return overlay
 		? ReactDOM.createPortal(
-			<div className={style.controls}>{children}</div>,
-			overlay
-		)
+				<div className={style.controls}>{children}</div>,
+				overlay
+		  )
 		: null;
 };
 
@@ -26,7 +27,7 @@ export enum ControlPosition {
 	TopLeft = "top-left",
 	TopRight = "top-right",
 	BottomLeft = "bottom-left",
-	BottomRight = "bottom-right"
+	BottomRight = "bottom-right",
 }
 const commonStyles: React.CSSProperties = {
 	display: "flex",
@@ -41,7 +42,8 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		marginLeft: "auto",
 		flexDirection: "column",
 		alignItems: "flex-end",
-		justifyContent: "flex-end"
+		justifyContent: "flex-end",
+		gridRowStart: 1,
 	},
 	[ControlPosition.BottomLeft]: {
 		...commonStyles,
@@ -49,7 +51,7 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		marginRight: "auto",
 		flexDirection: "column",
 		alignItems: "flex-start",
-		justifyContent: "flex-end"
+		justifyContent: "flex-end",
 	},
 	[ControlPosition.TopLeft]: {
 		...commonStyles,
@@ -57,6 +59,7 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		marginRight: "auto",
 		flexDirection: "column",
 		alignItems: "flex-start",
+		gridRowEnd: 2,
 	},
 	[ControlPosition.TopRight]: {
 		...commonStyles,
@@ -64,12 +67,9 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		marginLeft: "auto",
 		flexDirection: "column",
 		alignItems: "flex-end",
-	}
+	},
 };
 
 export const Section: FC<{ pos: ControlPosition }> = ({ children, pos }) => {
-	return <div style={styles[pos]}>
-		{children}
-	</div>;
+	return <div style={styles[pos]}>{children}</div>;
 };
-
