@@ -192,7 +192,7 @@ var style = {"controls":"controls_controls__3HQ8m"};
 styleInject(css_248z$1);
 
 var _styles;
-var Controls = function Controls(_ref) {
+var MapControls = function MapControls(_ref) {
   var children = _ref.children;
   var map = React.useContext(MapContext);
 
@@ -226,7 +226,8 @@ var styles = (_styles = {}, _styles[exports.ControlPosition.BottomRight] = /*#__
   marginLeft: "auto",
   flexDirection: "column",
   alignItems: "flex-end",
-  justifyContent: "flex-end"
+  justifyContent: "flex-end",
+  gridRowStart: "1"
 }), _styles[exports.ControlPosition.BottomLeft] = /*#__PURE__*/_extends({}, commonStyles, {
   gridArea: "bottom-left",
   marginRight: "auto",
@@ -1306,7 +1307,6 @@ var Modify = function Modify(_ref) {
   return null;
 };
 
-exports.Controls = Controls;
 exports.Draw = Draw;
 exports.FullScreenControl = FullScreenControl;
 exports.ImageLayer = ImageLayer;
@@ -1314,6 +1314,7 @@ exports.Interactions = Interactions;
 exports.Layers = Layers;
 exports.Map = Map;
 exports.MapContext = MapContext;
+exports.MapControls = MapControls;
 exports.Modify = Modify;
 exports.Section = Section;
 exports.Snap = Snap;
