@@ -17,9 +17,9 @@ export const MapControls: FC = ({ children }) => {
 
 	return overlay
 		? ReactDOM.createPortal(
-				<div className={style.controls}>{children}</div>,
-				overlay
-		  )
+			<div className={style.controls}>{children}</div>,
+			overlay
+		)
 		: null;
 };
 
@@ -28,6 +28,8 @@ export enum ControlPosition {
 	TopRight = "top-right",
 	BottomLeft = "bottom-left",
 	BottomRight = "bottom-right",
+	BottomLeftMobile = "bottom-right-mobile",
+	BottomRightMobile = "bottom-right-mobile",
 }
 const commonStyles: React.CSSProperties = {
 	display: "flex",
@@ -66,6 +68,25 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		marginLeft: "auto",
 		flexDirection: "column",
 		alignItems: "flex-end",
+	},
+	[ControlPosition.BottomRightMobile]: {
+		...commonStyles,
+		gridArea: "bottom-right",
+		marginLeft: "auto",
+		flexDirection: "column",
+		alignItems: "flex-end",
+		justifyContent: "flex-end",
+		gridRowStart: "1",
+		marginBottom: "5%",
+	},
+	[ControlPosition.BottomLeftMobile]: {
+		...commonStyles,
+		gridArea: "bottom-left",
+		marginRight: "auto",
+		flexDirection: "column",
+		alignItems: "flex-start",
+		justifyContent: "flex-end",
+		marginBottom: "5%",
 	},
 };
 
