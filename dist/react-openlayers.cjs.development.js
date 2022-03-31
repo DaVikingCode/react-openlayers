@@ -214,6 +214,8 @@ var MapControls = function MapControls(_ref) {
   ControlPosition["TopRight"] = "top-right";
   ControlPosition["BottomLeft"] = "bottom-left";
   ControlPosition["BottomRight"] = "bottom-right";
+  ControlPosition["BottomLeftMobile"] = "bottom-right-mobile";
+  ControlPosition["BottomRightMobile"] = "bottom-right-mobile";
 })(exports.ControlPosition || (exports.ControlPosition = {}));
 
 var commonStyles = {
@@ -244,6 +246,21 @@ var styles = (_styles = {}, _styles[exports.ControlPosition.BottomRight] = /*#__
   marginLeft: "auto",
   flexDirection: "column",
   alignItems: "flex-end"
+}), _styles[exports.ControlPosition.BottomRightMobile] = /*#__PURE__*/_extends({}, commonStyles, {
+  gridArea: "bottom-right",
+  marginLeft: "auto",
+  flexDirection: "column",
+  alignItems: "flex-end",
+  justifyContent: "flex-end",
+  gridRowStart: "1",
+  marginBottom: "8%"
+}), _styles[exports.ControlPosition.BottomLeftMobile] = /*#__PURE__*/_extends({}, commonStyles, {
+  gridArea: "bottom-left",
+  marginRight: "auto",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "flex-end",
+  marginBottom: "8%"
 }), _styles);
 var Section = function Section(_ref2) {
   var children = _ref2.children,

@@ -4,7 +4,9 @@ export declare enum ControlPosition {
     TopLeft = "top-left",
     TopRight = "top-right",
     BottomLeft = "bottom-left",
-    BottomRight = "bottom-right"
+    BottomRight = "bottom-right",
+    BottomLeftMobile = "bottom-right-mobile",
+    BottomRightMobile = "bottom-right-mobile"
 }
 export declare const Section: FC<{
     pos: ControlPosition;
