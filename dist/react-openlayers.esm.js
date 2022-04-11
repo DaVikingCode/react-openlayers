@@ -208,7 +208,7 @@ var ControlPosition;
   ControlPosition["TopRight"] = "top-right";
   ControlPosition["BottomLeft"] = "bottom-left";
   ControlPosition["BottomRight"] = "bottom-right";
-  ControlPosition["BottomLeftMobile"] = "bottom-right-mobile";
+  ControlPosition["BottomLeftMobile"] = "bottom-left-mobile";
   ControlPosition["BottomRightMobile"] = "bottom-right-mobile";
 })(ControlPosition || (ControlPosition = {}));
 
@@ -247,7 +247,7 @@ var styles = (_styles = {}, _styles[ControlPosition.BottomRight] = /*#__PURE__*/
   alignItems: "flex-end",
   justifyContent: "flex-end",
   gridRowStart: "1",
-  marginBottom: "8%"
+  marginBottom: "25%"
 }), _styles[ControlPosition.BottomLeftMobile] = /*#__PURE__*/_extends({}, commonStyles, {
   gridArea: "bottom-left",
   marginRight: "auto",

@@ -214,7 +214,7 @@ var MapControls = function MapControls(_ref) {
   ControlPosition["TopRight"] = "top-right";
   ControlPosition["BottomLeft"] = "bottom-left";
   ControlPosition["BottomRight"] = "bottom-right";
-  ControlPosition["BottomLeftMobile"] = "bottom-right-mobile";
+  ControlPosition["BottomLeftMobile"] = "bottom-left-mobile";
   ControlPosition["BottomRightMobile"] = "bottom-right-mobile";
 })(exports.ControlPosition || (exports.ControlPosition = {}));
 
@@ -253,7 +253,7 @@ var styles = (_styles = {}, _styles[exports.ControlPosition.BottomRight] = /*#__
   alignItems: "flex-end",
   justifyContent: "flex-end",
   gridRowStart: "1",
-  marginBottom: "8%"
+  marginBottom: "25%"
 }), _styles[exports.ControlPosition.BottomLeftMobile] = /*#__PURE__*/_extends({}, commonStyles, {
   gridArea: "bottom-left",
   marginRight: "auto",

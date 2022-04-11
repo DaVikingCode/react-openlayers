@@ -28,7 +28,7 @@ export enum ControlPosition {
 	TopRight = "top-right",
 	BottomLeft = "bottom-left",
 	BottomRight = "bottom-right",
-	BottomLeftMobile = "bottom-right-mobile",
+	BottomLeftMobile = "bottom-left-mobile",
 	BottomRightMobile = "bottom-right-mobile",
 }
 const commonStyles: React.CSSProperties = {
@@ -77,7 +77,7 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		alignItems: "flex-end",
 		justifyContent: "flex-end",
 		gridRowStart: "1",
-		marginBottom: "8%",
+		marginBottom: "25%",
 	},
 	[ControlPosition.BottomLeftMobile]: {
 		...commonStyles,
