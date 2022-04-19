@@ -247,14 +247,14 @@ var styles = (_styles = {}, _styles[ControlPosition.BottomRight] = /*#__PURE__*/
   alignItems: "flex-end",
   justifyContent: "flex-end",
   gridRowStart: "1",
-  marginBottom: "25%"
+  marginBottom: "26%"
 }), _styles[ControlPosition.BottomLeftMobile] = /*#__PURE__*/_extends({}, commonStyles, {
   gridArea: "bottom-left",
   marginRight: "auto",
   flexDirection: "column",
   alignItems: "flex-start",
   justifyContent: "flex-end",
-  marginBottom: "8%"
+  marginBottom: "26%"
 }), _styles);
 var Section = function Section(_ref2) {
   var children = _ref2.children,

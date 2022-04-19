@@ -77,7 +77,7 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		alignItems: "flex-end",
 		justifyContent: "flex-end",
 		gridRowStart: "1",
-		marginBottom: "25%",
+		marginBottom: "26%",
 	},
 	[ControlPosition.BottomLeftMobile]: {
 		...commonStyles,
@@ -86,7 +86,7 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		flexDirection: "column",
 		alignItems: "flex-start",
 		justifyContent: "flex-end",
-		marginBottom: "8%",
+		marginBottom: "26%",
 	},
 };
 
