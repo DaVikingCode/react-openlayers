@@ -30,4 +30,4 @@ const VectorLayer: FunctionComponent<Props> = ({ source, style, zIndex = 0, name
 };
 
 export default VectorLayer;
-export { Props as VectorLayerProps };
+export type { Props as VectorLayerProps };

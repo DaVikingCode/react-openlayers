@@ -43,4 +43,4 @@ export const View: FC<Props> = ({ options, onChangeCenter, onChangeResolution, o
 };
 
 export default View;
-export { Props as ViewProps };
+export type { Props as ViewProps };
