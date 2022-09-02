@@ -1,2 +1,3 @@
 export * from "./controls";
-export { FullScreenControl, FullScreenProps } from "./full-screen-control";
+export { FullScreenControl } from "./full-screen-control";
+export type { FullScreenProps } from "./full-screen-control";

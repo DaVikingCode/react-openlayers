@@ -1,0 +1,18 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "noEmit": false,
+        "target": "esnext",
+        "outDir": "./lib/esm",
+        "declaration": false
+    },
+    "exclude": [
+        "src/**/*.stories.*",
+        "src/stories/**"
+
+    ],
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx"
+    ]
+}

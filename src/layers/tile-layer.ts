@@ -35,4 +35,4 @@ const TileLayer: FC<Props> = ({ options, name, onLayerAdded }) => {
 };
 
 export default React.memo(TileLayer);
-export { Props as TileLayerProps };
+export type { Props as TileLayerProps };
