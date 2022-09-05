@@ -1,7 +1,7 @@
 {
 	"name": "@daviking/openlayers",
 	"module": "dist/react-openlayers.esm.js",
-	"description": "Library wrapping open layers with react.",
+	"description": "Library wrapping open layers with react. ",
 	"version": "0.1.0",
 	"license": "MIT",
 	"main": "dist/index.js",
