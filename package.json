@@ -1,6 +1,5 @@
 {
-	"name": "react-openlayers",
-	"author": "ange.picard",
+	"name": "@daviking/openlayers",
 	"module": "dist/react-openlayers.esm.js",
 	"description": "Library wrapping open layers with react.",
 	"version": "0.1.0",
