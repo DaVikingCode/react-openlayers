@@ -1,7 +1,7 @@
 import React, { FC, useContext, useState } from "react";
 import ReactDOM from "react-dom";
 import { MapContext } from "../map";
-import style from "./controls.css";
+import "./controls.css";
 
 export const MapControls: FC<{templateGridStyle : React.CSSProperties}> = ({ children, templateGridStyle }) => {
 	const map = useContext(MapContext);
@@ -17,7 +17,7 @@ export const MapControls: FC<{templateGridStyle : React.CSSProperties}> = ({ chi
 
 	return overlay
 		? ReactDOM.createPortal(
-			<div className={style.controls} style={templateGridStyle}>{children}</div>,
+			<div className="controls" style={templateGridStyle}>{children}</div>,
 			overlay
 		)
 		: null;
