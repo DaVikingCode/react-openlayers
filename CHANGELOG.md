@@ -1,3 +1,11 @@
+## [1.1.8](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.7...v1.1.8) (2022-10-18)
+
+
+### Bug Fixes
+
+* remove rollup config postcss ([b26f4ce](https://github.com/DaVikingCode/react-openlayers/commit/b26f4ceb4ee685d15f9a7eaa180c5285672501a0))
+* revert config postcss module ([835597c](https://github.com/DaVikingCode/react-openlayers/commit/835597c9cf4e319bb96c7bd429732e54120d0d2e))
+
 ## [1.1.7](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.6...v1.1.7) (2022-10-18)
 
 
