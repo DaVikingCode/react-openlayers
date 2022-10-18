@@ -1,3 +1,11 @@
+## [1.1.6](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.5...v1.1.6) (2022-10-18)
+
+
+### Bug Fixes
+
+* add postcss to rollump config ([6839b51](https://github.com/DaVikingCode/react-openlayers/commit/6839b517d60d5ac8fb48bb502a2d26e5fdf97c0b))
+* generate package-lock.json ([23d48df](https://github.com/DaVikingCode/react-openlayers/commit/23d48dfe4939f4346d50364bd20a9292e7221c2f))
+
 ## [1.1.5](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.4...v1.1.5) (2022-10-18)
 
 
