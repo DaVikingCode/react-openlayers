@@ -3,11 +3,7 @@ import ReactDOM from "react-dom";
 import { MapContext } from "../map";
 import style from "./controls.css";
 
-export interface MapControlsProps {
-	templateGridStyle : React.CSSProperties;
-}
-
-export const MapControls: FC<MapControlsProps> = ({ children, templateGridStyle }) => {
+export const MapControls: FC<{templateGridStyle : React.CSSProperties}> = ({ children, templateGridStyle }) => {
 	const map = useContext(MapContext);
 	const [overlay, setOverlay] = useState<Element | null>();
 
