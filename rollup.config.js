@@ -4,7 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import del from "rollup-plugin-delete";
 import svgr from "@svgr/rollup";
 import commonjs from "@rollup/plugin-commonjs";
-import eslintPluginPostCSSModules from "rollup-plugin-postcss-modules";
+import css from "rollup-plugin-import-css";
 
 export default [
 	// CommonJS
@@ -37,10 +37,8 @@ export default [
 					"node_modules/react-is/index.js": ["isFragment", "useMemo", "isMemo"]
 				}
 			}),
-			eslintPluginPostCSSModules({
-				modules: true
-			})
+			css()
 		],
 		external: ["lodash"]
 	},
-]
+];
