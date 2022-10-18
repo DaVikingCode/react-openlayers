@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.6...v1.1.7) (2022-10-18)
+
+
+### Bug Fixes
+
+* set unamed import fort css ([891d4ad](https://github.com/DaVikingCode/react-openlayers/commit/891d4ad5c76a6bdbd348e4ef95a1b76c5e4937bd))
+
 ## [1.1.6](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.5...v1.1.6) (2022-10-18)
 
 
