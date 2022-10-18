@@ -4,8 +4,8 @@ import { MapContext } from "../map";
 import style from "./controls.css";
 
 export interface MapControlsProps {
-	templateGridStyle? : React.CSSProperties;
-  }
+	templateGridStyle : React.CSSProperties;
+}
 
 export const MapControls: FC<MapControlsProps> = ({ children, templateGridStyle }) => {
 	const map = useContext(MapContext);
