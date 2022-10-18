@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.4...v1.1.5) (2022-10-18)
+
+
+### Bug Fixes
+
+* Change main/module/types path ([e91d0f7](https://github.com/DaVikingCode/react-openlayers/commit/e91d0f792f588e5ab82801fc2f40dfefa8453bb1))
+
 ## [1.1.4](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.3...v1.1.4) (2022-10-18)
 
 
