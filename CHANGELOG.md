@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.3...v1.1.4) (2022-10-18)
+
+
+### Bug Fixes
+
+* Change files to "lib" and "types" ([a658d06](https://github.com/DaVikingCode/react-openlayers/commit/a658d06d0369fbc838dbb9f67e2b9956b020de12))
+
 ## [1.1.3](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.2...v1.1.3) (2022-10-18)
 
 
