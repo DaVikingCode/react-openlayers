@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.1...v1.1.2) (2022-10-18)
+
+
+### Bug Fixes
+
+* [MapControls] Set non optional templateGridStyle variable ([e44427a](https://github.com/DaVikingCode/react-openlayers/commit/e44427a22ff93f86aa92987ebc1b2c54eb4d7794))
+
 ## [1.1.1](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.0...v1.1.1) (2022-09-07)
 
 
