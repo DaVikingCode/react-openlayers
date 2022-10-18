@@ -1,3 +1,10 @@
+## [1.1.11](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.10...v1.1.11) (2022-10-18)
+
+
+### Bug Fixes
+
+* add rollup config + reformat + remove dist (old) ([566f155](https://github.com/DaVikingCode/react-openlayers/commit/566f155623b3b92939d741865955d6e244036cbf))
+
 ## [1.1.10](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.9...v1.1.10) (2022-10-18)
 
 
