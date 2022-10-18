@@ -13,6 +13,22 @@
 	"engines": {
 		"node": ">=12"
 	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		],
+		"overrides": [
+			{
+				"files": [
+					"**/*.stories.*"
+				],
+				"rules": {
+					"import/no-anonymous-default-export": "off"
+				}
+			}
+		]
+	},
 	"scripts": {
 		"start": "npm run storybook",
 		"build": "npm run build:cjs && npm run build:esm",
@@ -59,8 +75,8 @@
 		"@types/ol": "^6.4.2",
 		"@types/react": "^17.0.3",
 		"@types/react-dom": "^17.0.3",
-		"@typescript-eslint/eslint-plugin": "^4.20.0",
-		"@typescript-eslint/parser": "^4.20.0",
+		"eslint": "^8.25.0",
+		"eslint-config-react-app": "^7.0.1",
 		"husky": "^6.0.0",
 		"jest": "^27.0.0-next.6",
 		"postcss": "^8.4.16",
@@ -68,7 +84,6 @@
 		"rollup": "^2.68.0",
 		"rollup-plugin-commonjs": "^10.1.0",
 		"rollup-plugin-delete": "^2.0.0",
-		"rollup-plugin-eslint": "^7.0.0",
 		"rollup-plugin-peer-deps-external": "^2.2.4",
 		"rollup-plugin-postcss": "^4.0.2",
 		"rollup-plugin-postcss-modules": "^2.0.2",
@@ -83,6 +98,7 @@
 		"ol": ">=6.5.0",
 		"react": ">=16",
 		"react-dom": "^17.0.2",
+		"rollup-plugin-eslint": "^7.0.0",
 		"rollup-plugin-import-css": "^3.0.3",
 		"screenfull": "^5.1.0"
 	},

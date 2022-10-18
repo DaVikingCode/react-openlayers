@@ -4,8 +4,8 @@ import * as ol from "ol/interaction";
 import { Options } from "ol/interaction/Snap";
 
 type SnapProps = {
-    active?: boolean,
-    options: Options,
+	active?: boolean;
+	options: Options;
 };
 
 export const Snap: FC<SnapProps> = ({ options, active = true }) => {

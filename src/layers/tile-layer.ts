@@ -6,7 +6,7 @@ import { BaseLayerProps } from "./base-layer-props";
 
 type Props = BaseLayerProps & {
 	options: Options;
-	onLayerAdded?: (layer: OLTileLayer) => void
+	onLayerAdded?: (layer: OLTileLayer) => void;
 };
 const TileLayer: FC<Props> = ({ options, name, onLayerAdded }) => {
 	const map = useContext(MapContext);

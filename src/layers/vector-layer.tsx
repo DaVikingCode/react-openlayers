@@ -1,11 +1,16 @@
 import { FunctionComponent, useContext, useEffect } from "react";
-import {MapContext} from "../map/map-context";
+import { MapContext } from "../map/map-context";
 import OLVectorLayer from "ol/layer/Vector";
 import { Options } from "ol/layer/BaseVector";
 import { BaseLayerProps } from "./base-layer-props";
 
 type Props = Options & BaseLayerProps;
-const VectorLayer: FunctionComponent<Props> = ({ source, style, zIndex = 0, name }) => {
+const VectorLayer: FunctionComponent<Props> = ({
+	source,
+	style,
+	zIndex = 0,
+	name,
+}) => {
 	const map = useContext(MapContext);
 
 	useEffect(() => {
@@ -13,9 +18,9 @@ const VectorLayer: FunctionComponent<Props> = ({ source, style, zIndex = 0, name
 
 		const vectorLayer = new OLVectorLayer({
 			source,
-			style
+			style,
 		});
-		vectorLayer.setProperties({name});
+		vectorLayer.setProperties({ name });
 		map.addLayer(vectorLayer);
 		vectorLayer.setZIndex(zIndex);
 

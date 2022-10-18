@@ -6,16 +6,24 @@ import { useEvent } from "../events/use-event";
 import { ObjectEvent } from "ol/Object";
 
 type Props = {
-	options: ViewOptions,
+	options: ViewOptions;
 	onChangeCenter?: (evt: ObjectEvent) => void;
 	onChangeResolution?: (evt: ObjectEvent) => void;
 	onChangeRotation?: (evt: ObjectEvent) => void;
 	onChange?: (evt: ObjectEvent) => void;
 	onChangeProperty?: (evt: ObjectEvent) => void;
 	onError?: (evt: ObjectEvent) => void;
-}
+};
 
-export const View: FC<Props> = ({ options, onChangeCenter, onChangeResolution, onChangeRotation, onChangeProperty, onError, onChange }) => {
+export const View: FC<Props> = ({
+	options,
+	onChangeCenter,
+	onChangeResolution,
+	onChangeRotation,
+	onChangeProperty,
+	onError,
+	onChange,
+}) => {
 	const map = useContext(MapContext);
 	const [view, setView] = useState<OlView>();
 

@@ -6,11 +6,11 @@ import { BaseLayerProps } from "./base-layer-props";
 
 type ImageLayerProps = BaseLayerProps & {
 	options: Options;
-	onLayerAdded?: (layer: OLImageLayer) => void
+	onLayerAdded?: (layer: OLImageLayer) => void;
 };
 
 // TODO: Refactor layer creation into a generic one.
-const ImageLayer: FC<ImageLayerProps> = ({ options, name, onLayerAdded}) => {
+const ImageLayer: FC<ImageLayerProps> = ({ options, name, onLayerAdded }) => {
 	const map = useContext(MapContext);
 	const [layer, setLayer] = useState<OLImageLayer | null>(null);
 
@@ -18,7 +18,7 @@ const ImageLayer: FC<ImageLayerProps> = ({ options, name, onLayerAdded}) => {
 		if (!map) return;
 
 		const ImageLayer = new OLImageLayer(options);
-		ImageLayer.setProperties({name});
+		ImageLayer.setProperties({ name });
 		map.addLayer(ImageLayer);
 		setLayer(ImageLayer);
 		return () => {

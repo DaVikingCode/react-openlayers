@@ -5,12 +5,16 @@ import { ModifyEvent, Options } from "ol/interaction/Modify";
 import { useEvent } from "../events/use-event";
 
 type ModifyProps = {
-    active?: boolean,
-    options: Options,
-    onModifyEnd?: (event: ModifyEvent) => void
+	active?: boolean;
+	options: Options;
+	onModifyEnd?: (event: ModifyEvent) => void;
 };
 
-export const Modify: FC<ModifyProps> = ({ options, active = true, onModifyEnd }) => {
+export const Modify: FC<ModifyProps> = ({
+	options,
+	active = true,
+	onModifyEnd,
+}) => {
 	const map = useContext(MapContext);
 	const [modify, setmodify] = useState<ol.Modify>();
 
@@ -28,7 +32,7 @@ export const Modify: FC<ModifyProps> = ({ options, active = true, onModifyEnd })
 		if (!modify) return;
 		modify.setActive(active);
 	}, [active, modify]);
-    
+
 	useEvent("modifyend", onModifyEnd, modify);
 
 	return null;

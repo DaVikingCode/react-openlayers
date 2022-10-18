@@ -6,6 +6,7 @@ import svgr from "@svgr/rollup";
 import commonjs from "@rollup/plugin-commonjs";
 import postcss from "rollup-plugin-postcss";
 import { eslint } from "rollup-plugin-eslint";
+import autoprefixer from "autoprefixer";
 
 export default [
 	// CommonJS
@@ -39,11 +40,17 @@ export default [
 				}
 			}),
 			postcss({
-				extensions: [".css"]
+				extensions: [".css"],
+				plugins: [autoprefixer()],
+				sourceMap: true,
+				extract: true,
+				minimize: true
 			}),
 			eslint({
 				exclude: [
-					"src/**"
+					"src/map/map.css",
+					"src/controls/controls.css",
+					"src/controls/controls.css",
 				]
 			}),
 		],

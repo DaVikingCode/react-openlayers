@@ -5,13 +5,18 @@ import { DrawEvent, Options } from "ol/interaction/Draw";
 import { useEvent } from "../events/use-event";
 
 type DrawProps = {
-    active?: boolean,
-    options: Options,
-    onDrawEnd?: (evt: DrawEvent) => void,
-    onDrawStart?: (evt: DrawEvent) => void
+	active?: boolean;
+	options: Options;
+	onDrawEnd?: (evt: DrawEvent) => void;
+	onDrawStart?: (evt: DrawEvent) => void;
 };
 
-export const Draw: FC<DrawProps> = ({ options, onDrawEnd, onDrawStart, active = true }) => {
+export const Draw: FC<DrawProps> = ({
+	options,
+	onDrawEnd,
+	onDrawStart,
+	active = true,
+}) => {
 	const map = useContext(MapContext);
 	const [draw, setDraw] = useState<ol.Draw>();
 

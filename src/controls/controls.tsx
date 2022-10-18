@@ -3,7 +3,10 @@ import ReactDOM from "react-dom";
 import { MapContext } from "../map";
 import "./controls.css";
 
-export const MapControls: FC<{templateGridStyle : React.CSSProperties}> = ({ children, templateGridStyle }) => {
+export const MapControls: FC<{ templateGridStyle: React.CSSProperties }> = ({
+	children,
+	templateGridStyle,
+}) => {
 	const map = useContext(MapContext);
 	const [overlay, setOverlay] = useState<Element | null>();
 
@@ -17,9 +20,11 @@ export const MapControls: FC<{templateGridStyle : React.CSSProperties}> = ({ chi
 
 	return overlay
 		? ReactDOM.createPortal(
-			<div className="controls" style={templateGridStyle}>{children}</div>,
-			overlay
-		)
+				<div className="controls" style={templateGridStyle}>
+					{children}
+				</div>,
+				overlay
+		  )
 		: null;
 };
 
@@ -76,7 +81,7 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		flexDirection: "column",
 		alignItems: "flex-end",
 		justifyContent: "flex-end",
-		gridRowStart: "1"
+		gridRowStart: "1",
 	},
 	[ControlPosition.BottomLeftMobile]: {
 		...commonStyles,
@@ -84,7 +89,7 @@ const styles: { [key in ControlPosition]: React.CSSProperties } = {
 		marginRight: "auto",
 		flexDirection: "column",
 		alignItems: "flex-start",
-		justifyContent: "flex-end"
+		justifyContent: "flex-end",
 	},
 };
 
