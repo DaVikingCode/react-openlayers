@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.8...v1.1.9) (2022-10-18)
+
+
+### Bug Fixes
+
+* add configuration for rollup-plugin-import-css ([c2151d7](https://github.com/DaVikingCode/react-openlayers/commit/c2151d7e73000955c37ba38873c4bb41d23e351d))
+
 ## [1.1.8](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.7...v1.1.8) (2022-10-18)
 
 
