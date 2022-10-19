@@ -1,3 +1,10 @@
+## [1.1.14](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.13...v1.1.14) (2022-10-19)
+
+
+### Bug Fixes
+
+* resize max-height for map-popup ([df5e63e](https://github.com/DaVikingCode/react-openlayers/commit/df5e63e71af17e8a73cbfc6763a61dc4c96e957f))
+
 ## [1.1.13](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.12...v1.1.13) (2022-10-19)
 
 
