@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import resolve from "@rollup/plugin-node-resolve";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import typescript from "@rollup/plugin-typescript";
@@ -5,13 +6,16 @@ import del from "rollup-plugin-delete";
 import svgr from "@svgr/rollup";
 import commonjs from "@rollup/plugin-commonjs";
 import postcss from "rollup-plugin-postcss";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { eslint } from "rollup-plugin-eslint";
 import autoprefixer from "autoprefixer";
+import path from 'path'
 
 export default [
 	// CommonJS
 	{
 		input: "src/index.tsx",
+		external: ["./lib/style.css", "lodash"],
 		output: {
 			dir: "./",
 			entryFileNames: "lib/cjs/index.js",
@@ -30,7 +34,11 @@ export default [
 				noEmit: true
 			}),
 			peerDepsExternal(),
-			resolve(),
+			resolve({
+				jsnext: true,
+				main: true,
+				browser: true,
+			}),
 			svgr(),
 			commonjs({
 				include: "node_modules/**",
@@ -40,20 +48,19 @@ export default [
 				}
 			}),
 			postcss({
-				extensions: [".css"],
+				extensions: ['.css'],
+				extract: path.resolve("lib/style.css"),
+				modules: true,
 				plugins: [autoprefixer()],
-				sourceMap: true,
-				extract: true,
-				minimize: true
+			}),
+			nodeResolve({
+				extensions: ['.css']
 			}),
 			eslint({
 				exclude: [
-					"src/map/map.css",
-					"src/controls/controls.css",
-					"src/controls/controls.css",
+					"src/styles/*.css"
 				]
-			}),
-		],
-		external: ["lodash"]
+			})
+		]
 	},
 ];

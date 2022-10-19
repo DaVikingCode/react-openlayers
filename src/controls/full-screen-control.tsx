@@ -2,7 +2,7 @@ import React, { FC, useContext, useEffect, useState } from "react";
 import { FullScreen } from "ol/control";
 import { Map } from "ol";
 import { MapContext } from "../map/map-context";
-import "./control.css";
+import "../styles/control.css";
 
 import screenfull from "screenfull";
 

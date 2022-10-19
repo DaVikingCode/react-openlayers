@@ -1,7 +1,7 @@
 import React, { FC, useContext, useState } from "react";
 import ReactDOM from "react-dom";
 import { MapContext } from "../map";
-import "./controls.css";
+import "../styles/controls.css";
 
 export const MapControls: FC<{ templateGridStyle: React.CSSProperties }> = ({
 	children,
