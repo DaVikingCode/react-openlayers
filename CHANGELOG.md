@@ -1,3 +1,10 @@
+## [1.1.12](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.11...v1.1.12) (2022-10-19)
+
+
+### Bug Fixes
+
+* restructure css files to match rollup config (postcss) ([8e88555](https://github.com/DaVikingCode/react-openlayers/commit/8e88555b3ae3d4e887af8bf9570a7677eb104342))
+
 ## [1.1.11](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.10...v1.1.11) (2022-10-18)
 
 
