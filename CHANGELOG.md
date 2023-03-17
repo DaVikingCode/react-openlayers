@@ -1,3 +1,10 @@
+## [1.1.16](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.15...v1.1.16) (2023-03-17)
+
+
+### Bug Fixes
+
+* rollup config : copy css file ([e3dc576](https://github.com/DaVikingCode/react-openlayers/commit/e3dc576cadc089a88ecee7ae288897fea4137e4d))
+
 ## [1.1.15](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.14...v1.1.15) (2023-03-17)
 
 
