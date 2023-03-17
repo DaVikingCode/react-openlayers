@@ -1,3 +1,10 @@
+## [1.1.15](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.14...v1.1.15) (2023-03-17)
+
+
+### Bug Fixes
+
+* change rollup config to es ([5611149](https://github.com/DaVikingCode/react-openlayers/commit/5611149e84c80a645654847787efc4923b3a0615))
+
 ## [1.1.14](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.13...v1.1.14) (2022-10-19)
 
 
