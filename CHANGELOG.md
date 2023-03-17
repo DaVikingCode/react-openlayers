@@ -1,3 +1,10 @@
+## [1.1.17](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.16...v1.1.17) (2023-03-17)
+
+
+### Bug Fixes
+
+* css map ([04f016c](https://github.com/DaVikingCode/react-openlayers/commit/04f016ced55f544f1c6e5369c2c0154319623def))
+
 ## [1.1.16](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.15...v1.1.16) (2023-03-17)
 
 
