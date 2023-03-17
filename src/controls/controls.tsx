@@ -1,6 +1,7 @@
 import React, { FC, useContext, useState } from "react";
 import ReactDOM from "react-dom";
 import { MapContext } from "../map";
+import "../styles/controls.css";
 
 export interface MapControlsProps {
 	templateGridStyle? : React.CSSProperties;
@@ -9,19 +10,6 @@ export interface MapControlsProps {
 export const MapControls: FC<MapControlsProps> = ({ children, templateGridStyle }) => {
 	const map = useContext(MapContext);
 	const [overlay, setOverlay] = useState<Element | null>();
-
-	const customCssStyle: React.CSSProperties = {
-		display: "grid",
-		height: "100%",
-		gridTemplateColumns: "1fr 1fr",
-		gridTemplateRows: "1fr 1fr",
-		gridTemplateAreas: "top-left top-right bottom-left bottom-right",
-		alignContent: "space-between",
-		justifyContent: "space-between",
-		gap: "8px",
-		padding: "8px",
-		pointerEvents: "none",
-	};
 
 	if (map && !overlay) {
 		setOverlay(
@@ -33,9 +21,12 @@ export const MapControls: FC<MapControlsProps> = ({ children, templateGridStyle 
 
 	return overlay
 		? ReactDOM.createPortal(
-			<div style={{ ...templateGridStyle, ...customCssStyle }}>{children}</div>,
-			overlay
-		)
+				<div className="controls" style={templateGridStyle}>
+					{children}
+				</div>,
+				overlay
+		  )
+
 		: null;
 };
 

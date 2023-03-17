@@ -12,13 +12,14 @@ import autoprefixer from "autoprefixer";
 import path from 'path'
 
 export default [
+	// CommonJS
 	{
 		input: "src/index.tsx",
 		external: ["./lib/style.css", "lodash"],
 		output: {
 			dir: "./",
 			entryFileNames: "lib/cjs/index.js",
-			format: "es",
+			format: "cjs",
 			globals:{
 				"lodash": "_"
 			}
