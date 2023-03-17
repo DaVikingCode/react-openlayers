@@ -1,3 +1,10 @@
+## [1.1.18](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.17...v1.1.18) (2023-03-17)
+
+
+### Bug Fixes
+
+* add type module to package json ([42b2386](https://github.com/DaVikingCode/react-openlayers/commit/42b238661c389d3ef46138fc0c5775d9932418d6))
+
 ## [1.1.17](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.16...v1.1.17) (2023-03-17)
 
 
