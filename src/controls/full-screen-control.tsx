@@ -2,7 +2,6 @@ import React, { FC, useContext, useEffect, useState } from "react";
 import { FullScreen } from "ol/control";
 import { Map } from "ol";
 import { MapContext } from "../map/map-context";
-import "../styles/control.css";
 
 import screenfull from "screenfull";
 
@@ -74,7 +73,7 @@ export const FullScreenControl: FC<Props> = ({ CustomControl }) => {
 		/>
 	) : (
 		<div
-			className="control"
+			style={{ position: "relative", width: "max-content" }}
 			ref={(el) => {
 				el && defaultControl && el.appendChild(defaultControl);
 			}}
