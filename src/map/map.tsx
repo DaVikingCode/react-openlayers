@@ -5,7 +5,6 @@ import React, {
 	FunctionComponent,
 	MutableRefObject,
 } from "react";
-import "../styles/map.css";
 import { MapContext } from "./map-context";
 import * as ol from "ol";
 import { useEvent } from "../events/use-event";
