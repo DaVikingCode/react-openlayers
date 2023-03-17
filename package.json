@@ -31,9 +31,10 @@
 	},
 	"scripts": {
 		"start": "npm run storybook --openssl-legacy-provider",
-		"build": "npm run build:cjs && npm run build:esm",
+		"build": "npm run build:cjs && npm run build:esm && npm run copy-files",
 		"build:cjs": "rollup -c",
 		"build:esm": "tsc --p tsconfig.lib.json",
+		"copy-files": "cp -r ./src/styles/ ./lib/esm/",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"lint": "eslint \"{src,test,stories}/**/*.{js,ts,tsx}\"",
