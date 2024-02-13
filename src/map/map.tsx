@@ -33,7 +33,6 @@ export const Map: FunctionComponent<MapProps> = ({
 			layers: [],
 			controls: [],
 			overlays: [],
-			renderer: "webgl",
 		};
 		const mapObject = new ol.Map(options);
 		mapObject.setTarget(mapEl.current);
