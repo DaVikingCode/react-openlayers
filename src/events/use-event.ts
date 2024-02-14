@@ -12,6 +12,7 @@ export function useEvent<EventType>(
 	useEffect(() => {
 		if (!callback || !observable) return;
 
+		// @ts-ignore
 		const eventKey = observable.on(eventName, callback);
 
 		return () => {
