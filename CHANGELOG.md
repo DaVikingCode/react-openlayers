@@ -1,3 +1,10 @@
+## [1.1.21](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.20...v1.1.21) (2024-2-14)
+
+
+### Bug Fixes
+
+* try webgl ([6a16813](https://github.com/DaVikingCode/react-openlayers/commit/6a168134d89559a18ed50c94b5d8142ba6dad8b4))
+
 ## [1.1.20](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.19...v1.1.20) (2024-2-14)
 
 
