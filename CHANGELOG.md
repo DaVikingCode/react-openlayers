@@ -1,3 +1,10 @@
+## [1.1.20](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.19...v1.1.20) (2024-2-14)
+
+
+### Bug Fixes
+
+* update @types/ol ([3f7d0d6](https://github.com/DaVikingCode/react-openlayers/commit/3f7d0d6b46aa92f8da6f8fe5aee71118e24d2f9a))
+
 ## [1.1.19](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.18...v1.1.19) (2024-2-14)
 
 
