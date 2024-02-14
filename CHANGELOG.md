@@ -1,3 +1,11 @@
+## [1.1.22](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.21...v1.1.22) (2024-2-14)
+
+
+### Bug Fixes
+
+* add autoprefixer ([882ec7d](https://github.com/DaVikingCode/react-openlayers/commit/882ec7d5cefedb0d195caf3f83e2c9723d75c93e))
+* remove deploy gh action + remove story book (core-js) ([f549a9c](https://github.com/DaVikingCode/react-openlayers/commit/f549a9cccab5be87e4b5d33f02968d1d2b585f7f))
+
 ## [1.1.21](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.20...v1.1.21) (2024-2-14)
 
 
