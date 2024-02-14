@@ -1,3 +1,15 @@
+## [1.1.19](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.18...v1.1.19) (2024-2-14)
+
+
+### Bug Fixes
+
+* change actions gh ([022f2bd](https://github.com/DaVikingCode/react-openlayers/commit/022f2bd99e56cf2444d835a394d539189892cdb3))
+* change deploy action + update ol ([644c122](https://github.com/DaVikingCode/react-openlayers/commit/644c122f60b86f38f6cb0b598d0f5719ee5d50ac))
+* doing something dirty during valentine's day ([bed5bdb](https://github.com/DaVikingCode/react-openlayers/commit/bed5bdb2c6aa47e46313c36684e02e4579505fed))
+* remove webgl render ([5749a68](https://github.com/DaVikingCode/react-openlayers/commit/5749a6877bab34a9d8e160a57e0851c1effd5fb6))
+* revert all day previous commit ([3378a89](https://github.com/DaVikingCode/react-openlayers/commit/3378a896a502799a03ab3d1cf7e347d3df27fb5e))
+* rollup build error ([e248707](https://github.com/DaVikingCode/react-openlayers/commit/e24870712ee33203efa5097485d3a976285ed6a1))
+
 ## [1.1.18](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.17...v1.1.18) (2023-03-17)
 
 
