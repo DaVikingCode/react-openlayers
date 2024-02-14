@@ -5,14 +5,14 @@ import { Options } from "ol/layer/BaseImage";
 import { BaseLayerProps } from "./base-layer-props";
 
 type ImageLayerProps = BaseLayerProps & {
-	options: Options;
-	onLayerAdded?: (layer: OLImageLayer) => void;
+	options: Options<any>;
+	onLayerAdded?: (layer: OLImageLayer<any>) => void;
 };
 
 // TODO: Refactor layer creation into a generic one.
 const ImageLayer: FC<ImageLayerProps> = ({ options, name, onLayerAdded }) => {
 	const map = useContext(MapContext);
-	const [layer, setLayer] = useState<OLImageLayer | null>(null);
+	const [layer, setLayer] = useState<OLImageLayer<any> | null>(null);
 
 	useEffect(() => {
 		if (!map) return;

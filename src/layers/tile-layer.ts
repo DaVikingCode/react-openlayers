@@ -5,12 +5,12 @@ import { Options } from "ol/layer/BaseTile";
 import { BaseLayerProps } from "./base-layer-props";
 
 type Props = BaseLayerProps & {
-	options: Options;
-	onLayerAdded?: (layer: OLTileLayer) => void;
+	options: Options<any>;
+	onLayerAdded?: (layer: OLTileLayer<any>) => void;
 };
 const TileLayer: FC<Props> = ({ options, name, onLayerAdded }) => {
 	const map = useContext(MapContext);
-	const [layer, setLayer] = useState<OLTileLayer | null>(null);
+	const [layer, setLayer] = useState<OLTileLayer<any> | null>(null);
 
 	useEffect(() => {
 		if (!map) return;

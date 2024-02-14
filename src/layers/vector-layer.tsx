@@ -4,7 +4,7 @@ import OLVectorLayer from "ol/layer/Vector";
 import { Options } from "ol/layer/BaseVector";
 import { BaseLayerProps } from "./base-layer-props";
 
-type Props = Options & BaseLayerProps;
+type Props = Options<any> & BaseLayerProps;
 const VectorLayer: FunctionComponent<Props> = ({
 	source,
 	style,
