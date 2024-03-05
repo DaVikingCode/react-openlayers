@@ -15,6 +15,7 @@ const VectorLayer: FunctionComponent<Props> = ({
 	style,
 	zIndex = 0,
 	name,
+	visible,
 	onLayerChangeVisible,
 	onPostRender,
 }) => {
@@ -26,6 +27,7 @@ const VectorLayer: FunctionComponent<Props> = ({
 		const vectorLayer = new OLVectorLayer({
 			source,
 			style,
+			visible,
 		});
 		vectorLayer.setProperties({ name });
 
