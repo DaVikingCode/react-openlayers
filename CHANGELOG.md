@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/DaVikingCode/react-openlayers/compare/v1.3.0...v1.3.1) (2024-3-5)
+
+
+### Bug Fixes
+
+* add visible to vector layer ([506991b](https://github.com/DaVikingCode/react-openlayers/commit/506991b8f034f5dd39d4b6f9f3eabffde617ee85))
+
 # [1.3.0](https://github.com/DaVikingCode/react-openlayers/compare/v1.2.0...v1.3.0) (2024-3-5)
 
 
