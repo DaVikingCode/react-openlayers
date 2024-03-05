@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.22...v1.2.0) (2024-3-5)
+
+
+### Features
+
+* add onLayerChangeVisible to vector layer ([d0605b7](https://github.com/DaVikingCode/react-openlayers/commit/d0605b7a7f7c8154f8cd58623674803d2e4c300f))
+
 ## [1.1.22](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.21...v1.1.22) (2024-2-14)
 
 
