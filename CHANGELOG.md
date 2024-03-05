@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/DaVikingCode/react-openlayers/compare/v1.2.0...v1.3.0) (2024-3-5)
+
+
+### Features
+
+* add onPostRender vector layer ([41f26f9](https://github.com/DaVikingCode/react-openlayers/commit/41f26f9560d66440a144b4f7101b013ac779a865))
+
 # [1.2.0](https://github.com/DaVikingCode/react-openlayers/compare/v1.1.22...v1.2.0) (2024-3-5)
 
 
