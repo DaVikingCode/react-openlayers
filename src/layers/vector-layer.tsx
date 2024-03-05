@@ -1,4 +1,4 @@
-import { FunctionComponent, useContext, useEffect } from "react";
+import { FunctionComponent, useContext, useEffect, useState } from "react";
 import { MapContext } from "../map/map-context";
 import OLVectorLayer from "ol/layer/Vector";
 import { Options } from "ol/layer/BaseVector";
@@ -6,6 +6,7 @@ import { BaseLayerProps } from "./base-layer-props";
 
 interface VectorLayerProps {
 	onLayerChangeVisible?: (visible: boolean) => void;
+	onPostRender?: () => void;
 }
 
 type Props = Options<any> & BaseLayerProps & VectorLayerProps;
@@ -15,6 +16,7 @@ const VectorLayer: FunctionComponent<Props> = ({
 	zIndex = 0,
 	name,
 	onLayerChangeVisible,
+	onPostRender,
 }) => {
 	const map = useContext(MapContext);
 
@@ -32,6 +34,10 @@ const VectorLayer: FunctionComponent<Props> = ({
 			vectorLayer.on("change:visible", (evt) =>
 				onLayerChangeVisible(evt.target)
 			);
+		}
+
+		if (onPostRender) {
+			vectorLayer.on("postrender", (evt) => onPostRender());
 		}
 
 		map.addLayer(vectorLayer);
