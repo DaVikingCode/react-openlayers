@@ -4,12 +4,17 @@ import OLVectorLayer from "ol/layer/Vector";
 import { Options } from "ol/layer/BaseVector";
 import { BaseLayerProps } from "./base-layer-props";
 
-type Props = Options<any> & BaseLayerProps;
+interface VectorLayerProps {
+	onLayerChangeVisible?: (visible: boolean) => void;
+}
+
+type Props = Options<any> & BaseLayerProps & VectorLayerProps;
 const VectorLayer: FunctionComponent<Props> = ({
 	source,
 	style,
 	zIndex = 0,
 	name,
+	onLayerChangeVisible,
 }) => {
 	const map = useContext(MapContext);
 
@@ -21,6 +26,14 @@ const VectorLayer: FunctionComponent<Props> = ({
 			style,
 		});
 		vectorLayer.setProperties({ name });
+
+		// If function is not null
+		if (onLayerChangeVisible) {
+			vectorLayer.on("change:visible", (evt) =>
+				onLayerChangeVisible(evt.target)
+			);
+		}
+
 		map.addLayer(vectorLayer);
 		vectorLayer.setZIndex(zIndex);
 
