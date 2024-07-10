@@ -1,3 +1,18 @@
+# [1.4.0](https://github.com/DaVikingCode/react-openlayers/compare/v1.3.1...v1.4.0) (2024-07-10)
+
+
+### Bug Fixes
+
+* rewrite npx semantic release command ([820e48e](https://github.com/DaVikingCode/react-openlayers/commit/820e48e2ff940b39cc8722588996315121028cc0))
+* set lts to semantic release run command ([ccf6bf8](https://github.com/DaVikingCode/react-openlayers/commit/ccf6bf81f6aba36ef56d165cf13a5552f336f38b))
+* setup node js version in release yaml ([447cec7](https://github.com/DaVikingCode/react-openlayers/commit/447cec780af822d9a0ce74334fc252dc49a35fd1))
+* update package json (remove engine node) ([1d5c423](https://github.com/DaVikingCode/react-openlayers/commit/1d5c42352247cd61b68b72dec1b3405f8fe4a564))
+
+
+### Features
+
+* add parameters to vector layer ([e70a142](https://github.com/DaVikingCode/react-openlayers/commit/e70a142a5f3a3c4c406428de228974666934f062))
+
 ## [1.3.1](https://github.com/DaVikingCode/react-openlayers/compare/v1.3.0...v1.3.1) (2024-3-5)
 
 
