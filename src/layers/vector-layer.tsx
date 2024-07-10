@@ -6,7 +6,9 @@ import { BaseLayerProps } from "./base-layer-props";
 
 interface VectorLayerProps {
 	onLayerChangeVisible?: (visible: boolean) => void;
-	onPostRender?: () => void;
+	onPostRender?: (evt: any) => void;
+	updateWhileAnimating?: boolean;
+	updateWhileInteracting?: boolean;
 }
 
 type Props = Options<any> & BaseLayerProps & VectorLayerProps;
@@ -16,6 +18,8 @@ const VectorLayer: FunctionComponent<Props> = ({
 	zIndex = 0,
 	name,
 	visible,
+	updateWhileAnimating,
+	updateWhileInteracting,
 	onLayerChangeVisible,
 	onPostRender,
 }) => {
@@ -28,6 +32,8 @@ const VectorLayer: FunctionComponent<Props> = ({
 			source,
 			style,
 			visible,
+			updateWhileAnimating,
+			updateWhileInteracting,
 		});
 		vectorLayer.setProperties({ name });
 
@@ -39,7 +45,7 @@ const VectorLayer: FunctionComponent<Props> = ({
 		}
 
 		if (onPostRender) {
-			vectorLayer.on("postrender", (evt) => onPostRender());
+			vectorLayer.on("postrender", (evt) => onPostRender(evt));
 		}
 
 		map.addLayer(vectorLayer);
