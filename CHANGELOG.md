@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/DaVikingCode/react-openlayers/compare/v1.4.0...v1.4.1) (2024-08-14)
+
+
+### Bug Fixes
+
+* add cssCustom to container ([b990594](https://github.com/DaVikingCode/react-openlayers/commit/b990594b0dbb8326e0ccb09bb805bf66be021519))
+
 # [1.4.0](https://github.com/DaVikingCode/react-openlayers/compare/v1.3.1...v1.4.0) (2024-07-10)
 
 
