@@ -15,12 +15,14 @@ type MapRef = ol.Map | undefined;
 export interface MapProps {
 	mapRef?: MutableRefObject<ol.Map>;
 	onMouseMove?: (event: any) => void;
+	customCss?: React.CSSProperties;
 }
 
 export const Map: FunctionComponent<MapProps> = ({
 	children,
 	onMouseMove,
 	mapRef,
+	customCss,
 }) => {
 	const mapEl = useRef<HTMLDivElement>(null);
 
@@ -48,7 +50,7 @@ export const Map: FunctionComponent<MapProps> = ({
 
 	return (
 		<MapContext.Provider value={map}>
-			<div ref={mapEl} className="ol-map">
+			<div ref={mapEl} className="ol-map" style={customCss}>
 				{children}
 			</div>
 		</MapContext.Provider>
